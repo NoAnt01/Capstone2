@@ -1,0 +1,440 @@
+/* AI 관리 페이지 특정 스타일 (수정된 버전) */
+
+/* 상위 컨테이너 배경색 조정 */
+body {
+    background-color: #f8f9fa; /* 전체 페이지 배경을 밝은 회색으로 설정 */
+}
+
+.main-content {
+    background-color: #f8f9fa; /* 메인 콘텐츠 영역 배경도 동일하게 */
+    padding: 30px; /* 메인 콘텐츠 전체 패딩 조정 */
+}
+
+/* 1. 상단 섹션 */
+.header-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px; /* 하단 패딩 */
+}
+.header-section h2 {
+    font-size: 1.8em; /* 글자 크기 유지 */
+    font-weight: 700; /* 더 진하게 */
+    color: #343a40; /* 어두운 색상 */
+    margin-bottom: 5px;
+}
+.header-section p {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin-bottom: 0; /* 불필요한 마진 제거 */
+}
+
+
+/* 카드 기본 */
+.stat-card {
+    transition: all 0.25s ease;
+    cursor: pointer;
+    background: #ffffff; /* 기본 배경 */
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 호버 시 효과 */
+.stat-card:hover {
+    background: #e6f0ff; /* 호버 시 배경 조금 진하게 */
+    transform: translateY(-2px); /* 살짝 위로 */
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 호버 시 아이콘 색 변화
+.stat-card:hover .icon-box.blue {
+    background: #d9e7ff;
+}
+
+.stat-card:hover .icon-box.red {
+    background: #ffd9d9;
+}
+*/
+
+/* 선택된 카드 강조 */
+.stat-card.active-filter {
+    background: #d6e7ff; /* 선택 카드 배경 강조 */
+    transform: translateY(-4px); /* 살짝 더 위로 */
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.45), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* 아이콘 기본 */
+.icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+/*
+.icon-box.blue {
+    background: #e2edff;
+    color: #1e63d6;
+}
+
+.icon-box.red {
+    background: #ffe5e5;
+    color: #d64040;
+}
+*/
+
+
+/* 3. 목록 헤더 및 버튼 */
+.list-management {
+    background-color: #fff; /* 목록 전체 배경 흰색 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 카드와 동일한 그림자 */
+    padding: 25px 30px; /* 내부 패딩 조정 */
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* 하단 마진 늘림 */
+}
+.list-header h3 {
+    font-size: 1.3em; /* 글자 크기 */
+    font-weight: 700; /* 더 진하게 */
+    color: #343a40;
+}
+.list-header .actions .action-btn {
+    margin-left: 10px;
+    padding: 9px 18px; /* 버튼 패딩 조정 */
+    border-radius: 8px; /* 버튼 모서리 둥글게 */
+    font-size: 0.9em;
+    font-weight: 600; /* 폰트 두께 */
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.action-btn.secondary {
+    background-color: #fff;
+    color: #495057;
+    border: 1px solid #dae0e5; /* 테두리 색상 조정 */
+}
+.action-btn.secondary:hover {
+    background-color: #f0f2f5; /* 호버 시 배경색 */
+    border-color: #c0c5cc;
+}
+
+.action-btn.primary {
+    background-color: #6a6ee6; /* 주요 버튼 색상 변경 */
+    color: #fff;
+    border: none;
+}
+.action-btn.primary:hover {
+    background-color: #555ad8; /* 호버 시 색상 */
+}
+.action-btn i {
+    margin-right: 7px; /* 아이콘과 텍스트 간격 */
+}
+
+/* 4. 검색 및 필터 바 */
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; /* 하단 마진 늘림 */
+}
+.search-box {
+    flex-grow: 1;
+    max-width: 350px; /* 검색창 너비 조정 */
+    position: relative;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px 15px 10px 40px; /* 좌측 패딩 늘려 아이콘 공간 확보 */
+    border: 1px solid #e0e0e0; /* 테두리 색상 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    font-size: 0.95em;
+    background-color: #fefefe; /* 배경색 약간 흰색으로 */
+}
+.search-box input::placeholder {
+    color: #a0a0a0; /* 플레이스홀더 색상 */
+}
+.search-box i {
+    left: 15px; /* 아이콘 위치 조정 */
+    color: #a0a0a0; /* 아이콘 색상 */
+    font-size: 1em;
+}
+.category-select {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* 모서리 둥글게 */
+    margin-left: 20px;
+    background-color: #fefefe; /* 배경색 약간 흰색으로 */
+    cursor: pointer;
+    font-size: 0.95em;
+    color: #495057;
+    min-width: 150px; /* 최소 너비 지정 */
+}
+
+/* 5. 카테고리 태그 */
+.category-tag {
+    display: inline-block;
+    padding: 4px 10px; /* 패딩 조정 */
+    border-radius: 15px; /* 더 둥글게 */
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+/* 태그 색상 정의 (이미지 기반) */
+.tag-텍스트-생성 { background-color: #e8f9f6; color: #21b6a1; } /* 텍스트 생성 태그 */
+.tag-이미지-생성 { background-color: #f0eaf7; color: #9258d4; } /* 이미지 생성 태그 */
+.tag-음성-인식 { background-color: #fff6e8; color: #ff8c4f; } /* 음성 인식 태그 */
+.tag-비전-분석 { background-color: #fbecec; color: #dc3545; } /* 비전 분석 태그 */
+
+
+/* 6. 테이블 스타일 조정 */
+.table-card {
+    padding: 0; /* 테이블 카드 자체의 패딩 제거 */
+    box-shadow: none; /* 테이블 카드 그림자 제거 (외부 list-management가 담당) */
+    border: none; /* 테이블 카드 테두리 제거 */
+    background-color: transparent; /* 테이블 카드 배경 투명하게 */
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse; /* 셀 테두리 중복 제거 */
+    background-color: #fff; /* 테이블 배경 흰색 */
+}
+
+.table-card th, .table-card td {
+    padding: 15px 20px; /* 테이블 셀 패딩 조정 */
+    border-bottom: 1px solid #e9ecef; /* 하단 테두리 */
+    text-align: left;
+    font-size: 0.92em;
+}
+
+.table-card th {
+    background-color: #f8f9fa; /* 헤더 배경색 */
+    color: #6c757d; /* 헤더 텍스트 색상 */
+    font-weight: 600; /* 헤더 폰트 두께 */
+    text-transform: uppercase; /* 대문자로 */
+    font-size: 0.85em; /* 헤더 글자 크기 */
+}
+
+.table-card tbody tr:last-child td {
+    border-bottom: none; /* 마지막 행 하단 테두리 제거 */
+}
+
+.table-card tbody tr:hover {
+    background-color: #f8f9fa; /* 호버 시 배경색 */
+}
+
+/* 테이블 작업 아이콘 */
+.action-icons i {
+    cursor: pointer;
+    margin-right: 15px; /* 아이콘 간격 늘림 */
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+.action-icons i:last-child {
+    margin-right: 0; /* 마지막 아이콘은 마진 없음 */
+}
+.action-icons .edit-icon { color: #6a6ee6; } /* 수정 아이콘 색상 변경 */
+.action-icons .delete-icon { color: #dc3545; }
+.action-icons i:hover {
+    opacity: 0.8;
+}
+
+/* 특정 컬럼 너비 조정 */
+.table-card th:nth-child(1), .table-card td:nth-child(1) { width: 70px; }   /* 문의번호 */
+.table-card th:nth-child(2), .table-card td:nth-child(2) { width: 150px; } /* 닉네임 */
+.table-card th:nth-child(3), .table-card td:nth-child(3) { width: 200px; } /* 제목 */
+.table-card th:nth-child(4), .table-card td:nth-child(4) { width: 230px; } /* 내용 */
+.table-card th:nth-child(5), .table-card td:nth-child(5) { width: 350px;}  /* 답변 */
+.table-card th:nth-child(6), .table-card td:nth-child(6) { width: 110px;}  /* 작성일 */
+.table-card th:nth-child(7), .table-card td:nth-child(7) { width: 110px;}
+.table-card th:nth-child(8), .table-card td:nth-child(8) { width: 90px;}  /* 답변일 */
+
+/* 날짜는 중앙 정렬 */
+.col-created, .col-replied .col-actions {
+    text-align: center;
+}
+
+/* 기본 ellipsis */
+.ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ellipsis 처리 (3줄까지) */
+.ellipsis-long {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 최대 3줄 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    white-space: normal;
+    cursor: pointer; /* 클릭 가능  */
+}
+
+/* 답변 완료된 행 */
+.table-card table tr.answered {
+    background-color: #e8f2ff !important;
+    border-left: 4px solid #007bff;
+}
+.table-card table tr.answered:hover {
+    background-color: #d6e7ff !important;
+}
+
+/* ==== 문의 답변 작성 모달 팝업 ==== */
+/* 모달 기본 스타일 */
+.modal {
+    display: none; /* 기본 숨김 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* 반투명 배경 */
+    /* 화면 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* 작은 화면 여백 확보 */
+}
+
+/* 모달 콘텐츠 박스 */
+.modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 600px; /* 넉넉한 크기 */
+    width: 100%;
+    max-height: 80%; /* 높이 제한 */
+    overflow-y: auto; /* 내용 길면 스크롤 */
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+
+/* 닫기 버튼 */
+.modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.modal .close:hover {
+    color: #000;
+}
+
+/* 제목과 내용 스타일 */
+.modal-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.modal-content-text {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* 줄바꿈 유지 */
+}
+
+/* == 읽기 전용 모달 ==*/
+#viewModal .modal-content {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+#viewModal h3 {
+    margin-bottom: 10px;
+}
+
+/* 내용, 답변 */
+#viewModal .modal-content-text {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    min-height: 120px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+#viewModalTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* == 답변 입력창 == */
+#replyText {
+    width: 100%;
+    min-height: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    resize: none;
+    overflow-y: auto;   /* 내용이 길어지면 스크롤 표시 */
+}
+
+/* 저장 버튼 */
+#saveReply {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#saveReply:hover {
+    background-color: #0056b3;
+}
+
+.modal-button-group {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    gap: 10px; /* 버튼 간 간격 */
+    margin-top: 10px; /* 위쪽 여백 */
+}
+
+#viewModalUser,
+#replyModalUser,
+.modal-subtitle  {
+    color: #5b9bd5;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+
+
+/* 전체 container 및 main-content의 기본 gap을 조정하여 이미지 여백 확보 */
+.container {
+    gap: 0; /* 컨테이너의 기본 gap이 있다면 제거 */
+}
+.main-content {
+    /* 기존 margin-left: var(--sidebar-width);는 유지 */
+    padding: 30px; /* 전체 페이지 여백 */
+}

@@ -1,0 +1,112 @@
+/* ========================================================= */
+/* 1. 필터 및 검색 UI 컨테이너 배치 */
+/* ========================================================= */
+.comp-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+
+.filter-controls {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 30px;
+    padding: 0 10px; 
+}
+
+/* 2. 검색창 스타일 */
+.search-input {
+    padding: 15px 20px;
+    font-size: 1rem; 
+    width: 100%;
+    max-width: 700px; /* 최대 너비를 700px로 확장하여 시각적 존재감을 높입니다. */
+    
+    /* 기존 스타일 유지 */
+    border: 4px solid #007bff;
+    border-radius: 15px;
+    box-sizing: border-box; 
+    margin: 0 auto 15px auto; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* 그림자도 약간 키워 입체감 부여 */
+    
+    /* 기존 margin-bottom을 50px로 유지합니다. */
+    margin-bottom: 50px; 
+}
+
+/* ========================================================= */
+/* 3. 테마 필터 탭 바 */
+/* ========================================================= */
+.filter-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    background-color: transparent; 
+    box-shadow: none;
+    margin: 0 auto; 
+}
+
+/* 개별 탭 버튼 */
+.filter-tabs .tab {
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 9999px;
+    border: 3px solid #b0b0b0; 
+    transition: background-color 0.3s, color 0.3s; 
+    user-select: none;
+    font-weight: 500;
+    
+    /* 비활성 탭 스타일 (연한 회색) */
+    background: #ffffff; 
+    color: #495057; 
+}
+
+.filter-tabs .tab:hover:not(.active) {
+    background: #e0e0e0;
+}
+
+/* 활성화된 탭 스타일 (파란색) */
+.filter-tabs .active {
+    background: #007bff;
+    color: #fff;
+
+}
+/*타이틀*/
+.comp-description {
+    /* 중앙 정렬 유지 */
+    text-align: center;
+    
+    /* 폰트 및 크기 */
+    font-size: 2.5rem; /* 크기를 키워 시선 집중 */
+    font-weight: 700; /* 볼드체로 강조 */
+    
+    /* 색상: 메인 색상 (파란색 계열)과 일치시켜 전문성 부여 */
+    color: #313131; /* ai-theme.css에서 사용된 파란색 */
+    
+    /* 여백 */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    
+    /* 구분선 추가 (Bottom Border) */
+    border-bottom: 3px solid #e9ecef; /* 제목 아래에 연한 구분선 */
+    padding-bottom: 10px; /* 구분선과 텍스트 사이 간격 */
+}
+.ai-card.hidden-card {
+    /* 1. 시각적으로 숨김 */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+
+    position: absolute !important; 
+    
+    width: 0 !important;
+    height: 0 !important; 
+    padding: 0 !important;
+    margin: 0 !important; 
+}

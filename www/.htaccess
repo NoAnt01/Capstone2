@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# 실제 파일이나 디렉토리가 없으면
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 모든 요청을 index.php로 전달
+RewriteRule ^(.*)$ index.php [QSA,L]

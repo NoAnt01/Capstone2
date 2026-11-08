@@ -1,0 +1,244 @@
+.mypage-wrapper {
+  font-family: 'Noto Sans KR', Arial, sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.mypage-container {
+  background: #fff;
+  width: 90%;
+  max-width: 720px;
+  padding: 40px 30px;
+  border-radius: 12px;
+}
+
+/* 내부 제목 */
+.mypage-container h1 {
+  text-align: center;
+  color: #0056d2;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+/* 수정 체크포인트 */
+.mypage-container section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.mypage-container section:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.mypage-container h2 {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #0056d2;
+  font-weight: 500;
+}
+
+.mypage-container strong {
+    font-weight: 700;
+}
+
+.mypage-container p {
+  font-size: 1rem;
+  color: #2a2a2a;
+  margin: 6px 0;
+}
+
+.mypage-container input[type="password"],
+.mypage-container input[type="text"],
+.mypage-container input[type="email"] {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.25s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+#pw-form input {
+    margin-bottom: 16px;
+}
+
+#pw-form button {
+    margin-top: 8px;
+}
+
+.mypage-container button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.user-info p {
+  margin-top: 16px;
+  margin-bottom: 14px;
+}
+
+.user-info button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#edit-form input {
+  margin-bottom: 10px;
+}
+
+#edit-form button {
+  margin-right: 10px;
+}
+
+/* 버튼 스타일 */
+.mypage-container .edit-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.mypage-container .edit-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.mypage-container .save-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+}
+.mypage-container .save-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+
+.mypage-container .cancel-btn {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #ced4da;
+  margin-top: 10px;
+}
+.mypage-container .cancel-btn:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+  transform: translateY(-1px);
+}
+
+
+.mypage-container .change-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.mypage-container .change-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.mypage-container .inquiry-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.mypage-container .inquiry-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.mypage-container .signout-btn {
+  background-color: #adb5bd;
+  color: #fff;
+}
+.mypage-container .signout-btn:hover {
+  background-color: #868e96;
+  transform: translateY(-1px);
+}
+
+
+.mypage-container .withdraw-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+.mypage-container .withdraw-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+
+/* 하단 버튼 정렬 */
+.mypage-container .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.actions .inquiry-btn {
+    margin-right: auto;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .mypage-container {
+    padding: 30px 20px;
+  }
+
+  .mypage-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .mypage-container h3 {
+    font-size: 1rem;
+  }
+}

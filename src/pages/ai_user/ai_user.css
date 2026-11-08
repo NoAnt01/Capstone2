@@ -1,0 +1,187 @@
+.comp-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .ranking-section {
+        margin-bottom: 30px;
+        padding: 15px 15px 50px 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-y: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    .ranking-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .ranking-carousel-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .ranking-list {
+        display: flex;
+        flex-grow: 1;
+        overflow-x: auto; 
+        overflow-y: hidden;
+        padding: 0 10px;
+        min-height: 220px; 
+        align-items: center;
+    }
+
+    .ranking-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scroll-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.2s;
+        flex-shrink: 0;
+        opacity: 0.8;
+    }
+
+    .scroll-button:hover {
+        background-color: #0056b3;
+        opacity: 1;
+    }
+
+    .ranking-item {
+        flex: 0 0 auto; 
+        width: 150px; 
+        height: 190px; 
+        margin-right: 15px;
+        text-align: center;
+        padding: 10px;
+        background-color: #fff; 
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05); 
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ranking-name {
+        text-decoration: none;
+        color: #212529;
+        font-weight: 600;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 5px; 
+        flex-shrink: 0;
+    }
+
+    .ranking-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .ranking-rank-small {
+        font-size: 0.9em;
+        font-weight: 500;
+        color: #6c757d;
+        margin-top: auto;
+        flex-shrink: 0;
+    }
+
+    .ranking-image-container {
+        height: 70px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .ranking-image {
+        width: 100%; 
+        height: 100%;
+        object-fit: contain;    
+    }
+
+    .ranking-section + h2 {
+        margin-top: 100px !important;
+    }
+
+    .ranking-themes {
+        font-size: 0.75em;
+        color: #6c757d;
+        margin: 3px 0;
+        line-height: 1.3;
+        max-height: 42px; 
+        overflow: hidden; 
+        white-space: normal;
+        flex-grow: 1;
+        display: block; 
+    }
+
+    .ranking-themes .theme-tag {
+        display: inline-block;
+        padding: 1px 4px;
+        margin-right: 2px;
+        margin-top: 2px;    
+        border-radius: 3px;
+        background-color: #e9ecef;
+    }
+
+    .sort-bar-container {
+        max-width: 1200px;
+        margin: 15px auto 15px auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .sort-bar-label {
+        font-weight: 600;
+        color: #495057;
+        margin-right: 15px;
+        font-size: 0.95em;
+        flex-shrink: 0;
+    }
+
+    #ai-sort-select {
+        padding: 8px 12px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background: #fff;
+        cursor: pointer;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    #ai-sort-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .sort-bar-container h2 {
+        margin: 0;
+    }

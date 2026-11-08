@@ -1,0 +1,332 @@
+/* ===== 기본 초기화 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ⚠ 여기서 더 이상 font-family를 덮어쓰지 않음! */
+/* header.php에서 지정한 'Poppins', 'Noto Sans KR' 그대로 사용하게 둔다 */
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===== 전체 래퍼: 페이지 전체 폭 사용 ===== */
+#wrapper {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background-color: #ffffff;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    min-height: 100vh;
+}
+
+/* ===== 헤더 (커뮤니티 상단 영역) ===== */
+#community-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 32px;
+    border-bottom: 3px solid #4285f4;
+    background-color: #ffffff;
+}
+
+.user-menu a {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.user-menu a:hover {
+    background-color: #1a73e8;
+    color: #ffffff;
+}
+
+/* ===== 메인 레이아웃 ===== */
+#main-container {
+    display: flex;
+    padding: 24px 32px 32px;
+    gap: 24px;
+}
+
+/* ===== 사이드바 ===== */
+#sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.menu-box {
+    margin-bottom: 16px;
+    border: 1px solid #e5e7eb;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: #fafbff;
+}
+
+.menu-box h4 {
+    font-size: 14px;
+    color: #1a73e8;
+    border-bottom: 1px dashed #e5e7eb;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.menu-item {
+    padding: 7px 6px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #555;
+    border-radius: 8px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.menu-item:hover {
+    background-color: #e6f2ff;
+    color: #1a73e8;
+}
+
+.menu-item.active {
+    background: linear-gradient(135deg, #1a73e8, #4285f4);
+    color: #ffffff;
+}
+
+/* ===== 콘텐츠 영역 ===== */
+#content-area {
+    flex-grow: 1;
+    padding-right: 4px;
+}
+
+/* 게시판 상단 */
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #4285f4;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.board-header h2 {
+    font-size: 18px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.board-header .actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actions select {
+    padding: 7px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    font-size: 13px;
+    color: #4b5563;
+    background-color: #ffffff;
+}
+
+/* 글쓰기 버튼 */
+.write-btn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    box-shadow: 0 8px 18px rgba(26, 115, 232, 0.35);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.write-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(26, 115, 232, 0.45);
+}
+
+/* ===== 게시글 목록 테이블 ===== */
+.post-list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.post-list th,
+.post-list td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.post-list thead th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #6b7280;
+    border-top: 1px solid #ddd;
+}
+
+/* 컬럼 넓이 */
+.col-num   { width: 7%; }
+.col-board { width: 15%; }
+.col-title { width: auto; text-align: left; }
+.col-author{ width: 12%; }
+.col-date  { width: 13%; }
+.col-views { width: 8%; }
+
+/* 행 호버 */
+.post-list tbody tr:hover {
+    background-color: #f5f7ff;
+}
+
+/* 제목 링크 */
+.post-title {
+    color: #111827;
+    font-weight: 500;
+}
+
+.post-title:hover {
+    text-decoration: underline;
+    color: #1a73e8;
+}
+
+/* 공지 태그 */
+.notice-tag {
+    color: #e54c3c;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* ===== 페이지네이션 ===== */
+.pagination {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 7px 11px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    color: #555;
+    font-size: 12px;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.pagination a.active {
+    background-color: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #e6f2ff;
+}
+
+/* ===== 검색 영역 (커뮤니티 하단 전용) ===== */
+#community-search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0 6px;
+    margin-top: 8px;
+    border-top: 1px solid #eee;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+}
+
+/* 헤더 검색창이 아니라, 커뮤니티 섹션 안의 검색바만 스타일 적용 */
+#community-search-section .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#community-search-section .search-bar input {
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    width: 220px;
+    font-size: 13px;
+}
+
+#community-search-section .search-bar button {
+    background-color: #f7f7f7;
+    border: none;
+    cursor: pointer;
+    padding: 4px 10px;
+}
+
+#community-search-section .search-bar .material-icons {
+    font-size: 18px;
+    color: #555;
+    vertical-align: middle;
+}
+
+/* ===== 반응형 처리 ===== */
+@media (max-width: 960px) {
+    #main-container {
+        flex-direction: column;
+        padding: 16px 16px 24px;
+    }
+
+    #sidebar {
+        width: 100%;
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+    }
+
+    .menu-box {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 640px) {
+    #community-header {
+        padding: 10px 16px;
+    }
+
+    #main-container {
+        padding: 12px 12px 20px;
+    }
+
+    #content-area {
+        padding-right: 0;
+    }
+
+    .board-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .board-header h2 {
+        font-size: 16px;
+    }
+
+    .col-board { display: none; }
+}

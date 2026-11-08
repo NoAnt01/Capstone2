@@ -1,0 +1,7 @@
+src/shared/api/db_config.php
+.ftpaccess
+.lastlogin
+.shelldenied
+.upload_guard
+DataBackup/
+testtt.text

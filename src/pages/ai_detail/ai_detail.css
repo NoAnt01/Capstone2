@@ -1,0 +1,255 @@
+/* 기본 레이아웃 및 헤더 */
+.detail-container {
+    max-width: 1280px; 
+    margin: 50px auto; 
+    padding: 0 40px; 
+}
+
+.ai-header {
+    background: linear-gradient(135deg, #eef5ff 0%, #ffffff 100%); 
+    border-radius: 16px;
+    padding: 40px; 
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.ai-header-layout {
+    display: flex;
+    gap: 30px;
+    align-items: center; 
+}
+.ai-logo-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+.ai-header-content { flex-grow: 1; }
+.ai-header-content h1 {
+    font-size: 3rem; 
+    margin: 0 0 5px 0;
+    color: #1a202c; 
+}
+.ai-header-content .slogan {
+    font-size: 1.25rem;
+    font-weight: 300; 
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+.meta-info {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-top: 15px;
+}
+
+/* 메인 컨텐츠 박스 */
+.detail-content-box {
+    background-color: #ffffff; 
+    padding: 40px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.detail-content-box h2, 
+.detail-content-box h3 {
+    color: #212529;
+}
+
+/* 섹션 제목 (h2) 크기 통일 */
+.detail-content-box h2 {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    border-left: 5px solid #1890ff; 
+    padding-left: 15px;
+    margin-top: 0;
+}
+
+.content-divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 40px 0;
+}
+
+/* 상단 구역 레이아웃 (소개 + 요약) */
+.content-split-row {
+    display: flex;
+    gap: 40px; 
+    align-items: flex-start;
+}
+
+.intro-left-col { flex: 2.5; }
+.intro-left-col p {
+    font-size: 1.05rem;
+    color: #4a5568;
+    text-align: justify;
+}
+
+.summary-right-col {
+    flex: 2.5; 
+    background-color: #f8fafc; 
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.summary-right-col h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.summary-table ul { list-style: none; padding: 0; margin: 0; }
+
+.summary-table li {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;        
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e2e8f0; 
+    padding-bottom: 10px;
+}
+.summary-table li:last-child { border-bottom: none; margin-bottom: 0; }
+.summary-table li strong {
+    flex: 0 0 100px;      
+    min-width: 100px;     
+    font-weight: 700;
+    color: #2d3748; 
+    white-space: nowrap;  
+}
+.summary-table li span {
+    color: #2b6cb0; 
+    font-weight: 600;
+    text-align: right; 
+    flex: 1;           
+    word-break: keep-all; 
+}
+
+
+/* 하단 구역 레이아웃 (기능 + 기술) */
+.bottom-split-row {
+    display: flex;
+    gap: 60px; 
+    align-items: flex-start;
+}
+
+.features-left-col,
+.tech-right-col {
+    flex: 1; 
+    min-width: 0; 
+}
+
+/* 왼쪽 기능 목록과 오른쪽 기술 정보 내용 텍스트 스타일 통일 */
+.feature-list-simple,
+.tech-list-simple {
+    padding-left: 20px; 
+    margin-top: 0;
+}
+
+.feature-list-simple li {
+    list-style: disc; 
+    margin-bottom: 12px;
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 400; 
+    line-height: 1.7;
+    position: static; 
+    padding-left: 0;
+    display: list-item; 
+}
+
+.tech-list-simple li {
+    list-style: none; 
+    margin-bottom: 12px;
+    color: #4a5568;
+    
+    display: flex;        
+    align-items: flex-start; 
+    padding-left: 15px; 
+    position: relative;
+    
+    font-size: 1.1rem;
+    font-weight: 400; 
+    line-height: 1.7;
+}
+
+.tech-list-simple li::before {
+    content: "•"; 
+    color: #4a5568; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+
+.tech-label {
+    font-weight: 700;
+    color: #2b6cb0; 
+    min-width: 90px; 
+    max-width: 90px;
+    flex-shrink: 0; 
+    text-align: left;
+}
+
+.tech-divider {
+    display: none; 
+}
+
+.tech-content {
+    color: #4a5568; 
+    font-weight: 400; 
+    font-size: 1.1rem; 
+    flex-grow: 1; 
+}
+
+
+/* 반응형 */
+@media (max-width: 850px) {
+    .content-split-row,
+    .bottom-split-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .summary-right-col,
+    .features-left-col,
+    .tech-right-col {
+        width: 100%;
+        flex: none;
+    }
+    
+    .summary-table li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .summary-table li span { text-align: left; }
+    
+    .feature-list-simple,
+    .tech-list-simple {
+        padding-left: 20px;
+    }
+}
+
+/* 리뷰 섹션 */
+.review-section {
+    max-width: 1280px;
+    margin: 40px auto 80px auto; 
+    padding: 0 40px; 
+    border-top: 1px solid #e2e8f0; 
+    padding-top: 30px;
+}
+.review-form { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); margin-bottom: 40px; }
+.review-form h3 { font-size: 1.5rem; margin-top: 0; color: #4a5568; }
+.review-form textarea { width: 100%; min-height: 120px; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; resize: vertical; font-size: 1rem; box-sizing: border-box; }
+.review-form button { float: right; margin-top: 15px; padding: 10px 25px; background-color: #2b6cb0; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.review-form::after { content: ""; display: table; clear: both; }
+.review-item { border: 1px solid #e9ecef; padding: 20px; margin-bottom: 20px; border-radius: 8px; background-color: #f7fafc; }
+.review-meta { display: flex; justify-content: space-between; color: #718096; margin-bottom: 10px; }
+.global-footer { text-align: center; color: #aaa; padding: 20px; }
