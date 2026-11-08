@@ -14,16 +14,16 @@
 
 ## 🏗 시스템 아키텍처
 
-### ER-D (Entity-Relationship Diagram)
-![ER-D](ERD.jpg)
+### ER-D
+![ER-D](https://github.com/NoAnt01/Capstone2/issues/1)
 
-### Flowchart (서비스 흐름도)
-![Flowchart](flowchart_final_3x_light.jpg)
+### Flowchart
+![Flowchart](https://github.com/NoAnt01/Capstone2/issues/2)
 
 ---
 
 ## 💻 담당 기능 상세
 
-### 1. 🔐 회원가입, 로그인 및 마이페이지 (담당: 성겸)
+### 1. 🔐 회원가입, 로그인 및 마이페이지
 * **회원가입/로그인**: 필수 및 선택 약관 동의(이메일 수신 동의 등) 기능을 구현하였으며, 입력 항목 누락 및 비밀번호 조건(영문/숫자/특수문자 조합 10~16자) 불충족 시 토스트 알림을 통해 유효성 검사를 수행합니다.
 * **마이페이지**: 닉네임, 이메일, 비밀번호 변경 기능과 이메일 수신 동의 체크박스(AJAX 방식)를 구현하였으며, 회원 탈퇴 시 DB에서 정보가 삭제되도록 설계했습니다.
