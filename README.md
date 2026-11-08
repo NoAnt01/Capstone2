@@ -1,12 +1,12 @@
 # 🚀 AIPICK (아이픽) - AI 추천 및 교육 플랫폼
 
 ## 📖 프로젝트 소개
-**AIPICK(아이픽)**은 사용자에게 꼭 맞는 AI와 학습 경로를 탐색하고 추천해 주는 종합 AI 플랫폼입니다. 최신 AI 도구 추천부터 국비지원 부트캠프, 추천 강의 및 도서 정보, 그리고 실시간 AI 소식까지 한곳에서 확인할 수 있습니다.
+AIPICK(아이픽)은 사용자에게 꼭 맞는 AI와 학습 경로를 탐색하고 추천해 주는 종합 AI 플랫폼입니다. 최신 AI 도구 추천부터 국비지원 부트캠프, 추천 강의 및 도서 정보, 그리고 실시간 AI 소식까지 한곳에서 확인할 수 있습니다.
 
 ## 👥 팀원 및 역할 분담
 * **김주호(조장)**: 웹 서비스 개발 전반 총괄, 파일 구조 설계 및 도메인 관리, 메인 페이지 및 기타 기능(광고/후원 등) 구현
-* **노성겸**: AI 교육(강의) 페이지,마이페이지, 회원가입, 로그인 기능 구현 및 전체 시스템 아키텍처(Flowchart) 설계
-* **박진우**: AI 교육(국비지원캠프) 페이지, 관리자 페이지 구현 및 시스템 아키텍처(ER-D) 설계
+* **노성겸**: AI 교육(강의) 페이지, 마이페이지, 문의 기능, 회원가입/로그인 기능 구현 및 시스템 아키텍처(Flowchart) 설계
+* **박진우**: AI 교육(국비지원캠프) 페이지, 관리자 페이지 구현 및 시스템 아키텍처(ERD) 설계
 * **장준하**: 메인 페이지, AI 추천, AI 소식 페이지 구현
 * **이규민**: AI 교육(도서) 페이지, 상세 페이지, 사용자 후기 및 커뮤니티 구현
 
@@ -14,11 +14,11 @@
 
 ## 🏗 시스템 아키텍처
 
-### ER-D
-![ER-D](https://github.com/NoAnt01/Capstone2/issues/1)
+### ERD
+![ER-D](https://private-user-images.githubusercontent.com/66471503/698866802-9dec6a87-4aaa-40f9-81fa-3551ee96d08f.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTQxMzAyNjUsIm5iZiI6MTc5NDEyOTk2NSwicGF0aCI6Ii82NjQ3MTUwMy82OTg4NjY4MDItOWRlYzZhODctNGFhYS00MGY5LTgxZmEtMzU1MWVlOTZkMDhmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjExMDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMTA4VDA5MjYwNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQwMGQ4OGEwMTg0YTk4N2U4NDQ0ZmJjMGQ3OThmMmRkYWE5OGZkOWE1OTI3N2E5N2QxOGY2MWFlMjU5NzEzMjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.DA3UR87XniFPSffR9j6KDLLiiF3cP2Roznfw3x2dOKo)
 
 ### Flowchart
-![Flowchart](https://github.com/NoAnt01/Capstone2/issues/2)
+![Flowchart](https://private-user-images.githubusercontent.com/66471503/698866974-217a4da3-07ab-4d69-88ab-5b3a9488eccb.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTQxMzAyMTUsIm5iZiI6MTc5NDEyOTkxNSwicGF0aCI6Ii82NjQ3MTUwMy82OTg4NjY5NzQtMjE3YTRkYTMtMDdhYi00ZDY5LTg4YWItNWIzYTk0ODhlY2NiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjExMDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMTA4VDA5MjUxNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIxZjg2OTkyZTM3YzljZTU3ZWRlNDBiNDg0YTVhZjY0ODBkZTkxYjFiNWVmYjI2NDIyZDdiYzBjOGRiMzdjYzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.jIjiphYdgq4uwyRnxj9cIDZ-RBx7TabM93A3cZN2_9I)
 
 ---
 
